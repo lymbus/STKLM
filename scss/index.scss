@@ -1,0 +1,385 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+p a{display: inline-flex;}
+li{
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6,strong{
+    font-size: inherit;
+    font-weight: inherit;
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+html {
+    scroll-behavior: smooth; }
+/* ______________________ */
+$colorUno:white;
+$colorDos:rgb(230, 174, 72);
+$colorOscuro:#393939;
+$iconos: #f6deb4;
+$colorSubmenu: #eaeaea;
+
+@mixin flexible($a,$b,$c,$d,$e) {
+    display: flex;
+    flex-flow: $a $b;
+    justify-content: $c;
+    align-items: $d;
+    align-content: $e;
+}
+body{
+    font-family:'raleway',sans-serif;
+}
+.header{
+    width: 100%;
+    background-color: $colorUno;
+    color: $colorOscuro ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    &__centrado{
+        width: 92%;
+        margin: auto;
+
+        @include flexible(row, wrap, space-between, center, initial);
+    }
+    &__logo{
+        max-width: 200px;
+        font-size: 2em;
+        font-weight: 800;
+    }    
+    &__fas{
+        // width: 100%;
+        display: none;
+        font-size: 2em;
+    }
+    &__nav{
+        width: calc( 100% - 200px );
+
+        font-size: 0.8em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__ul{
+        @include flexible(row, nowrap,flex-end, center, initial);
+    }
+    &__li{
+        padding: 4em 0 4em 4em;
+        &:hover .header__submenu{
+            @include flexible(column, nowrap, flex-start, center, initial);
+            min-width: 150px;
+            background-color:$colorUno;
+            border-top: .6em solid $colorDos;
+
+            position: absolute;
+            top: 9.2em;
+
+            font-size: 1em;
+            font-weight: 400;
+            text-transform: initial;
+        }
+    }
+    &__submenu{
+        display: none;  
+    }
+    &__li2{
+        width: 100%;
+        padding: 0.8em ;
+        &:hover{
+            color: $colorDos;
+        }
+    }
+    &__enlaces{
+        transition: all 0.6s ease;
+        &.aqui{
+            color: $colorDos;
+        }
+        &:hover{
+            color:$colorDos;
+            }
+    }  
+}
+
+.up{
+    width: 100%;
+    text-align: center;
+    color: $iconos; 
+    position: fixed;
+    top:3em;
+    left: 0;
+    z-index: 1;
+    font-size: 3em;
+    color: $iconos;
+}
+.down{
+    width: 100%;
+    text-align: center;
+    
+    position: fixed;
+    bottom: 1em;
+    left: 0;
+    z-index: 1;
+    font-size: 3em;
+    color: $iconos;
+}
+
+.producto{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $colorUno;
+    color: $colorOscuro;
+    @include flexible(row, wrap, center, initial, center);
+    position: relative;
+       
+    &__centrado{
+        width: 50%;
+        margin: auto;
+        @include flexible(row, wrap, space-between, center, center);
+    }
+    &__columna{
+        width: calc( 90% / 2 );
+    }
+    &__nombre{
+        width: 100%;
+
+        font-size: 1.8em;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+    }
+    &__linea{
+        width: 8em;
+        min-height: 0.1em;
+        background-color: $colorOscuro;
+        margin: 2em 0;
+    }
+    &__info{
+        width: 100%;
+        line-height: 1.8em;
+        margin: 2em 0;
+    }
+    &__a{
+        border: 1px solid $colorDos;
+        padding: 1em 2em;
+        display: inline-flex;
+
+        font-size: 0.8em;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $colorDos;
+
+        transition: all 0.5s ease;
+        &:hover{
+            background-color: $colorDos;
+            color: $colorUno;
+        }
+    }
+}      
+.producto.amarillo{
+    background-color: $colorDos;
+    color: $colorUno;
+    .producto__centrado{
+        @include flexible(row-reverse, wrap, space-between, center, center);
+    }
+    .producto__linea{
+            background-color: $colorUno;
+        }
+    .producto__a{
+            border: 1px solid $colorUno;
+            color: $colorUno;
+        &:hover{
+            background-color: $colorUno;
+            color: $colorDos;
+            }
+        }
+}
+.f{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $colorOscuro;
+    @include flexible(row, nowrap, center, center, initial);
+    text-align: center;
+    &__centrado{
+        width: 80%;
+        @include flexible(column, nowrap, center, center, initial);
+    }
+    &__h3{
+        width: 100%;
+        font-size: 5em;
+        letter-spacing: 0.1em;
+        font-weight: 800;
+        color: $colorUno;
+        // background-color: palevioletred;
+    }
+    &__linea{
+        width: 10em;
+        min-height: .2em;
+        margin: 2em 0;
+        background-color: $colorUno;
+    }
+    &__copy{
+        font-size: 0.9em;
+        color: $colorDos;
+    }
+    &__rrss{
+        width: 90%;
+        margin: 2em 0;
+
+        font-size: 1.2em;
+        color: $colorUno;
+
+        @include flexible(row, nowrap, center, center, initial);
+    }
+    &__li{
+        padding: 0 .4em;
+    } 
+    &__fab{
+        width: 40px;
+        height: 40px;
+
+        background-color: $colorUno;
+        color: $colorOscuro;
+        border-radius: 100%;
+        @include flexible(row, nowrap, center, center, initial);
+        transform: scale(1);
+        transition: all .5s ease;
+        &:hover{
+            background-color: $colorDos;
+            transform: scale(1.2);
+        }
+    }
+     
+}
+
+@media only screen and (max-width:960px){
+    main{
+        padding-top: 2em;
+    }
+.header{
+    padding: 01em 0;
+    &__centrado{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        
+        @include flexible(row-reverse, wrap, center ,center, center);
+    }
+    &__nav{
+    opacity: 0;
+    width: 100vw;
+    position: absolute;
+    top: 4em;
+    left:0;
+    transform: translateX(-200%);
+    transition: all 0.8s ease;
+    &.abrir{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+    &__ul{
+        background-color: $colorUno;
+        padding: 0 3em;
+        @include flexible(column, nowrap,flex-start,center, center);
+        font-weight: 400;
+        text-align: left;
+    }
+    
+    &__li{
+        width: 100%;
+        border-top: 1px solid $colorSubmenu;
+        @include flexible(row, wrap,space-between,center, flex-start);
+        text-transform: initial;
+        
+        padding: 0.6em 0 0.6em 0.6em;
+
+        cursor: pointer;
+        overflow: hidden;
+        &::after{
+            content: '>';
+        }
+    }
+    
+    &__submenu{
+        width: 100%;
+        &.abrir2{
+            display: block;
+            position: static;
+        }
+    }
+    &__a{
+        border: 0;
+        &::after{
+            content: '';
+            }
+    } 
+    &__logo{
+        width: 100%;
+    }
+    &__fas{
+        font-size: 1.2em;
+        display: inline;
+        cursor: pointer;
+        text-align: left;
+    } 
+}
+.producto{
+    // height: 100vh;
+    min-height: initial;
+    padding: .8em 0;
+    // margin: 2em 0;
+    padding: 2.8em 1.8em ;
+    &__centrado{
+        width: 100%;
+    }
+    &__columna{
+        width: 100%;
+        margin: auto;
+        // padding: 2.6em 0 ;
+    }
+    &__linea{
+        margin: .4em;
+    }
+    &__info{
+        margin: .8em 0;
+        font-size: .8em;
+    }      
+}
+.f{
+    min-height: auto;
+    &__centrado{
+        width: 60%;
+        margin: 2em 0;
+    }
+    &__h3{
+        font-size: 4em;
+    }
+    &__rrss{
+        margin: 0; 
+        font-size: 1.8em;
+    }
+} 
+} 
+
+@media screen and (prefers-color-scheme:dark){
+    body{
+        $colorUno:#393939;
+        $colorDos:rgb(230, 174, 72);
+        $colorOscuro:white;
+        $iconos: #f6deb4;
+        $colorSubmenu: #eaeaea;
+    }
+}
