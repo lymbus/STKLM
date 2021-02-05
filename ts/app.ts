@@ -8,7 +8,7 @@ barra.addEventListener('click',() : void =>{
 menu.classList.toggle('abrir')})
 
 lista.forEach((li,i):void =>{
-    lista[i].addEventListener('click',()=>{
+    lista[i].addEventListener('click',() :void =>{
         submenu.forEach((sub,i):void =>{
             submenu[i].classList.remove('abrir2')
         })
