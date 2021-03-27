@@ -4,6 +4,7 @@
  
   ## Tabla de contenidos:
 - [Proyecto:](#Proyecto)
+- * [Demo.](#demo) 
   * [Herramientas.](#construido-con) 
   * [Conocimientos adquiridos.](#conocimientos-adquiridos)
 - [Contacto.](#Contacto)
@@ -11,8 +12,13 @@
 - [Agradecimientos.](#Agradecimientos)
 
  
- ## 🚀 Proyecto :
- ### 🛠️ Herramientas :
+ ##  Proyecto 🚀:
+ 
+ ### Demo :
+ 
+ Puedes ver una demo de la web replicada [aquí.](https://lymbus.github.io/STKLM/) 
+ 
+ ### Herramientas 🛠️:
 
  -HTML5.
  
@@ -28,13 +34,15 @@
  
 ## Conocimientos adquiridos:
 
+Realizando la réplica de esta web he empezado a aplicar SASS y la metodología BEM.
+
 ## Contacto: 
 
  -[GitHub](https://github.com/lymbus)
  
  -[LinkedIn](https://www.linkedin.com/in/lydia-est%C3%A9vez-chamorro/)
  
- -[Web personal]
+ -[Web personal](https://lymbus.github.io/PORFOLIO/)
  
 ## Licencia🧾:
 
