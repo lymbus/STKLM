@@ -2,7 +2,17 @@
 
  Réplica de la página web de STKLM, responsive y con modo oscuro.
  
-## Construido con 🛠️:
+  ## Tabla de contenidos:
+- [Proyecto:](#Proyecto)
+  * [Herramientas.](#construido-con) 
+  * [Conocimientos adquiridos.](#conocimientos-adquiridos)
+- [Contacto.](#Contacto)
+- [Licencia.](#Licencia)
+- [Agradecimientos.](#Agradecimientos)
+
+ 
+ ## 🚀 Proyecto :
+ ### 🛠️ Herramientas :
 
  -HTML5.
  
@@ -16,11 +26,15 @@
  
  -Git.
  
+## Conocimientos adquiridos:
+
 ## Contacto: 
 
  -[GitHub](https://github.com/lymbus)
  
  -[LinkedIn](https://www.linkedin.com/in/lydia-est%C3%A9vez-chamorro/)
+ 
+ -[Web personal]
  
 ## Licencia🧾:
 
